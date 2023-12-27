@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>bianjiwenjian.svg</file>
+    <file>bianjiwenjianjia.svg</file>
+    <file>pinleijianshao_o.svg</file>
+    <file>pinleizengjia_o.svg</file>
+    <file>shanchuwenjian.svg</file>
+    <file>shanchuwenjianjia.svg</file>
+    <file>tianjiawenjian.svg</file>
+    <file>wenjian.svg</file>
+    <file>wenjianjia.svg</file>
+    <file>xinzengwenjianjia.svg</file>
+  </qresource>
+</RCC>

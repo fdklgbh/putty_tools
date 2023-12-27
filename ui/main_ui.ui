@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PuttyTools</class>
+ <widget class="QMainWindow" name="PuttyTools">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PuttyTools V2.1</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="4,3,3" columnstretch="4,6">
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="scpBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>复制文件</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0" columnstretch="1,5,3,1">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>本地:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>选择路径</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>复制文件到本地</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>开始</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>远程:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item row="1" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="fileInfoBox">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>文件信息</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout" columnstretch="3,7">
+       <item row="3" column="0">
+        <widget class="QLabel" name="pwd_lab">
+         <property name="text">
+          <string>passWord:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="pwd_edit">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="port_lab">
+         <property name="text">
+          <string>port:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="port_edit">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="text">
+          <string extracomment="22"/>
+         </property>
+         <property name="maxLength">
+          <number>5</number>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="username_lab">
+         <property name="text">
+          <string>userName:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="host_lab">
+         <property name="text">
+          <string>host:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="username_edit">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="host_edit">
+         <property name="tabletTracking">
+          <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <widget class="QTreeView" name="treeView">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="itemsExpandable">
+       <bool>true</bool>
+      </property>
+      <attribute name="headerCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QTextBrowser" name="showMsg">
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::PreventContextMenu</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionAddFile">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/tianjiawenjian.svg</normaloff>:/icon/tianjiawenjian.svg</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件</string>
+   </property>
+   <property name="toolTip">
+    <string>新建文件</string>
+   </property>
+  </action>
+  <action name="actionDelFile">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/shanchuwenjian.svg</normaloff>:/icon/shanchuwenjian.svg</iconset>
+   </property>
+   <property name="text">
+    <string>删除文件</string>
+   </property>
+   <property name="toolTip">
+    <string>删除文件</string>
+   </property>
+  </action>
+  <action name="actionAddFolder">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/xinzengwenjianjia.svg</normaloff>:/icon/xinzengwenjianjia.svg</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件夹</string>
+   </property>
+   <property name="toolTip">
+    <string>新建文件夹</string>
+   </property>
+  </action>
+  <action name="actionDelFolder">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/shanchuwenjianjia.svg</normaloff>:/icon/shanchuwenjianjia.svg</iconset>
+   </property>
+   <property name="text">
+    <string>删除文件夹</string>
+   </property>
+   <property name="toolTip">
+    <string>删除文件夹</string>
+   </property>
+  </action>
+  <action name="actionRenameFolder">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/bianjiwenjianjia.svg</normaloff>:/icon/bianjiwenjianjia.svg</iconset>
+   </property>
+   <property name="text">
+    <string>重命名文件夹</string>
+   </property>
+   <property name="toolTip">
+    <string>重命名</string>
+   </property>
+  </action>
+  <action name="actionRenameFile">
+   <property name="icon">
+    <iconset resource="../icon/apprcc.qrc">
+     <normaloff>:/icon/bianjiwenjian.svg</normaloff>:/icon/bianjiwenjian.svg</iconset>
+   </property>
+   <property name="text">
+    <string>修改文件</string>
+   </property>
+   <property name="toolTip">
+    <string>修改文件</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>treeView</tabstop>
+  <tabstop>host_edit</tabstop>
+  <tabstop>port_edit</tabstop>
+  <tabstop>username_edit</tabstop>
+  <tabstop>pwd_edit</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../icon/apprcc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>treeView</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>showMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>treeOneClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>host_edit</sender>
+   <signal>selectionChanged()</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>selected_text()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>port_edit</sender>
+   <signal>selectionChanged()</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>selected_text()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>username_edit</sender>
+   <signal>selectionChanged()</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>selected_text()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>478</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pwd_edit</sender>
+   <signal>selectionChanged()</signal>
+   <receiver>PuttyTools</receiver>
+   <slot>selected_text()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>new_file()</slot>
+  <slot>openFile()</slot>
+  <slot>showMenu()</slot>
+  <slot>treeDoubleClick()</slot>
+  <slot>treeOneClick()</slot>
+  <slot>selected_text()</slot>
+  <slot>on_editing_finished()</slot>
+ </slots>
+</ui>
