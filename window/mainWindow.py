@@ -207,7 +207,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
         index = self.treeView.currentIndex()
         return self.model.itemFromIndex(index)
 
-    def addFile(self):
+    def addFile(self, *args):
         nodeMsg, item = self.node
         index = self.treeView.currentIndex()
         item = self.model.itemFromIndex(index)
