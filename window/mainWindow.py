@@ -117,6 +117,8 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
                 if nodeMsg['type'] == 'file':
                     folderId = nodeMsg['folderId']
                     item = item.parent()
+                    if item is None:
+                        item = self.root_item
                 else:
                     folderId = nodeMsg['id']
                 self.fileData.setFolderId(folderId)
