@@ -190,7 +190,7 @@ class Ui_PuttyTools(object):
 
     def retranslateUi(self, PuttyTools):
         _translate = QtCore.QCoreApplication.translate
-        PuttyTools.setWindowTitle(_translate("PuttyTools", "PuttyTools V2.1"))
+        PuttyTools.setWindowTitle(_translate("PuttyTools", "PuttyTools V2.1.2"))
         self.scpBox.setTitle(_translate("PuttyTools", "复制文件"))
         self.label.setText(_translate("PuttyTools", "本地:"))
         self.pushButton_2.setText(_translate("PuttyTools", "选择路径"))

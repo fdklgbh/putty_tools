@@ -33,7 +33,7 @@ class FileWindow(QWidget, Ui_widget, SettingOption):
         self.fileName = ''
         self.passWord = ''
 
-    def save_file(self):
+    def save_file(self, *args):
         self.fileName = self.filename_edit.text()
         self.host = self.host_edit.text()
         self.port = self.port_edit.text() or '22'
