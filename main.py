@@ -7,6 +7,7 @@ import sys
 from config import PROJECT_PATH, LOG_PATH
 from window.mainWindow import PuttyToolsWindow
 import traceback
+
 sys.path.append(abspath(PROJECT_PATH))
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMessageBox
@@ -20,7 +21,7 @@ def custom_exception_handler(type_, value, trace: traceback):
     QMessageBox.critical(None, "错误", str(error_msg) + f'日志文件保存在Log文件夹下\n文件名：{file_name}')
     with open(join(LOG_PATH, file_name), 'w', encoding='utf8') as f:
         f.write(error_msg)
-    old(type_, value, trace)
+    sys.exit(-1)
 
 
 if __name__ == '__main__':
@@ -28,11 +29,9 @@ if __name__ == '__main__':
     QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
     app = QApplication([])
-    old = sys.excepthook
     sys.excepthook = custom_exception_handler
 
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     main_window = PuttyToolsWindow()
     main_window.show()
     app.exec_()
-

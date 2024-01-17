@@ -255,7 +255,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
                 high = mid
         return None
 
-    def addFolder(self):
+    def addFolder(self, *args):
         nodeMsg, item = self.node
         # if nodeMsg:
         try:
@@ -295,7 +295,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
 
         self.actionAddFolder.triggered.disconnect()
 
-    def renameFolder(self):
+    def renameFolder(self, *args):
         nodeMsg, item = self.node
         if item:
             self.show_msg(f'文件夹信息:{nodeMsg}')
@@ -309,7 +309,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
                     self.show_msg(f'修改前文件夹名称:{oldName}, 修改后:{newName}')
         self.actionRenameFolder.disconnect()
 
-    def renameFile(self):
+    def renameFile(self, *args):
         nodeMsg, item = self.node
         self.show_msg('文件信息 ===>', self.getUserRole(item))
         if item:
@@ -331,7 +331,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
             self.fileWindow.setWindowTitle('修改文件')
         self.fileWindow.show()
 
-    def delFolder(self):
+    def delFolder(self, *args):
         nodeMsg, item = self.node
 
         def delId(id_):
@@ -352,7 +352,7 @@ class PuttyToolsWindow(QMainWindow, Ui_PuttyTools, SettingOption):
 
         self.actionDelFolder.disconnect()
 
-    def delFile(self):
+    def delFile(self, *args):
         nodeMsg, item = self.node
         if nodeMsg and item:
             self.sqlite.delete(self.fileTable, nodeMsg['id'])

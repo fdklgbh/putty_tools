@@ -9,6 +9,14 @@
 
 ## 更新记录
 
+### 2.1.3
+修复bug
+1. [bug 删除文件夹 #1](https://github.com/fdklgbh/putty_tools/issues/1)
+2. [bug 删除文件 #2](https://github.com/fdklgbh/putty_tools/issues/2)
+3. [bug 修改文件 #3](https://github.com/fdklgbh/putty_tools/issues/3)
+4. [bug 多次弹窗错误弹窗 #4](https://github.com/fdklgbh/putty_tools/issues/4)
+5. [bug 新建文件夹 #5](https://github.com/fdklgbh/putty_tools/issues/5)
+
 ### 2.1.2
 修复python3.6升3.9出现的问题
 #### 修复bug
