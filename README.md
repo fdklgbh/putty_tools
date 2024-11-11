@@ -1,6 +1,7 @@
 # PuttyTools
 由于mobaxterm 新增的数量有限制, xshell禁止使用,编写该工具
-
+## 归档
+发现更好的[WindTerm](https://github.com/kingToolbox/WindTerm)
 ## 使用方式
 1. 需要先双击项目路径下Theme\PuttyTools.reg 把putty主题样式放入注册表
 2. 打开PuttyTools.exe 进行新建文件夹或者ssh的配置信息文件
